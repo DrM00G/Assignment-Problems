@@ -27,10 +27,11 @@ def divide_and_conquer_sort(input_list):
 
       if inserted == 0:
         result.append(divide_and_conquer_sort(input_list[(len(input_list)//2):])[n])
-        
+
     # print("Result: "+str(result))
     return result
   else:
+    
     # print("Single: "+str(input_list))
     return input_list
 
