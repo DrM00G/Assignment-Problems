@@ -1,0 +1,63 @@
+Suppose that you take a bus to work every day. Bus A arrives at 8am but is x minutes late with  x∼U(0,15).  Bus B arrives at 8:05 but with  x∼U(0,10).  The bus ride is 20 minutes and you need to arrive at work by 8:30.
+
+A:
+1:
+Bus A arrives at 8am but is x minutes late with  x∼U(0,15). Bus A is late an average of 7.5  minutes and it takes 20 mins to get to work so on average, you'll get to work at 8:27:30.
+
+2:
+Bus B arrives at 8:05 but with  x∼U(0,10). Bus B is late an average of 5  minutes and it takes 20 mins to get to work so on average, you'll get to work at 8:30.
+
+3:
+Bus A arrives at 8am but is x minutes late with  x∼U(0,15) and the ride is 20 minutes. Work starts at 8:30 and so to be on time, the bus has to be 10 minutes late or less which is 11/16 of the chances which is %68.
+
+4:
+Bus B arrives at 8:05am but is x minutes late with  x∼U(0,10) and the ride is 20 minutes. Work starts at 8:30 and so to be on time, the bus has to be 5 minutes late or less which is 6/11 of the chances which is %55.
+
+The number of seconds it takes you to come out the other end of the wormhole follows an exponential distribution with parameter  λ=10,  meaning that  x∼p(x)  where
+
+p(x)={10e^(−10x) if x>0
+     {   0       otherwise
+
+B:
+1:
+The average of p(x) is E[p(x)] which is integral(x*p(x), -∞ to ∞) = integral(10e^(−10x), 0 to ∞) = (-x*e^(-10x) - e^(-10x)/10, 0 to ∞) 
+f(∞) = (-(∞)*e^(-∞) - e^(-∞)/10) = 0
+f(0) = (0*e^(0) - e^(0)/10) = -1/10
+f(∞) - f(0) = 0 - (-1/10) = 1/10
+It will take 0.1 seconds on average
+
+2:
+The probability of x > 60 = P(60 < x < ∞) = integral(p(x), 60 to ∞) = integral(10e^(−10x), 60 to ∞) = (-e^(−10x), 60 to ∞)
+f(∞) = -e^(−∞) = 0
+f(60) = -e^(−600) 
+f(∞) - f(0) = 0 - (-e^(−600)) = 
+2.65039655e-261 is the chance to be in the wormhole for more than a minute.
+
+3:
+P(0 < x < n) = 99.999
+integral(p(x), 0 to n) = integral(10e^(−10x), 0 to n) = (-e^(−10x), 0 to n)
+f(n) = -e^(−10*n)
+f(0) = -e^(0) = -1
+f(∞) - f(0) = 1 - (e^(−10*n)) = 0.99999
+0.00001 = e^(−10*n)
+ln(0.00001) = -10*n
+ln(0.00001)/(-10) = n = 1.1512925465 seconds
+
+The probability of coming out of the wormhole within 1.1512925465 seconds is  99.999%.
+
+4:
+Day = 24*60*60 = 86,400 seconds
+The probability of x > 86,400 = P(86,400 < x < ∞) = integral(p(x), 86,400 to ∞) = integral(10e^(−10x), 86,400 to ∞) = (-e^(−10x), 86,400 to ∞)
+f(∞) = -e^(−∞) = 0
+f(60) = -e^(−864,000) = 0
+f(∞) - f(0) = 0 - 0
+0 is the chance to be in the wormhole for more than a day.
+
+5:
+1 minutes = 60 seconds
+The probability of x > 60 = P(600 < x < ∞) = integral(p(x), 60 to ∞) = integral(10e^(−10x), 60 to ∞) = (-e^(−10x), 60 to ∞)
+f(∞) = -e^(−∞) = 0
+f(60) = -e^(−600) = -2.650397e^(-261)
+f(∞) - f(60) = 2.650397e^(-261)
+
+2.650397e^(-261) is the chance to be in the wormhole for more than a minute, and if you lived to 122 years and 164 days like Jeanne Calment and worked from the moment you were born to the day you died than you'd go to work 89,388 times. The probability of staying more than a minute in your whole life would be 2.369136e^(-256) which is so incredibly unlikely. So even if you lived as much as the oldest person to ever live and worked every possible day, you'd be fine and your freind would be a fool.

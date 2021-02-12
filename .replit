@@ -1,2 +1,2 @@
-run = "python src/coin-flip-likelihood.py"
+run = "python src/problem_76_2_1.py"
 language = "python3"

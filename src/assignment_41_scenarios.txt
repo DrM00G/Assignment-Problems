@@ -1,0 +1,7 @@
+Give a real-world scenario in which something could go drastically wrong if you mistakenly use a logistic regression when the data is actually linear.
+
+Youre trying to make a medicine that reduces inflamation, and theres a compound in this medice thats linearly proportional to the effectivity of the drug. Becuase you use logistic reggression, you make the drug far too potent and likely cause severse side effects like imune system shut down.
+
+Give a real-world scenario in which something could go drastically wrong if you mistakenly use a linear regression when the data is actually sigmoid-shaped.
+
+When youre building a sky-scraper, you give an estimate on cost compared to hieght based on other sky scrapers. Unfortunately, as hieght increases, the base of the building also gets bigger making the price logistic. If you use linear you give your client a vastly underestimated budget and you end up in alot of trouble.

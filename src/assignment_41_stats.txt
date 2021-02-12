@@ -1,0 +1,51 @@
+Compute the likelihood function  L(k|{1,17,8,25,3}).  Remember that the likelihood is just the probability of getting the result  {1,17,8,25,3}  under the assumption that the data was sampled from the distribution  pk(x): Because they all have the same likelyhood, p(1)p(17)p(8)p(25)p(3) = 1/k^5
+
+"Normalize" the likelihood function by multiplying it by some constant  c  such that sums to  1.  That is, find the constant  c  such that
+∑(k=1,∞)(c⋅L)(k|{1,17,8,25,3})dk=1.
+
+"Normalize" the likelihood function by multiplying it by some constant  c  such that sums to  1.  That is, find the constant  c  such that
+Sum(c⋅L(k|{1,17,8,25,3}), 0 to in ∞)=1. = 
+L(k|{1,17,8,25,3}) = 
+{0      0 < k < 25
+{1/k^5 25 < k < ∞
+Sum(c*0, 0 to 25)+Sum(c/k^5, 25 to ∞)
+
+So solve for c that
+Sum(c/k^5, 25 to ∞) = 1
+(assignment_40_statistics.py)
+c*6.929e-07 = 1
+c = 1/0.0000006929
+c = 1443209.69837
+
+What is the most probable value of  k?  You can tell this just by looking at the distribution  p(k),  but make sure to justify your answer with an explanation.
+Most probable value of p(k) is when dp/dk = 0
+p(k) = 1443209.69837/k^5
+dp/dk = -1443209.69837/4k^4
+-1443209.69837/4k^4 = 0
+1443209.69837/4k^4 = 0
+1/4k^4 = 0
+1/k^4 = 0
+k = infinity
+But this is a min, not a max, so we have to check the finite endpoints, which is k = 25
+p(25) = 0.1477846
+p(25) > p(∞) 
+Most probable value of k is 25
+
+
+The largest number in the dataset is  25.  What is the probability that  25  is actually the upper bound chosen by your friend?
+p(k) = 1443209.69837/k^5
+p(25) = 1443209.69837/(25)^5 = 0.1477846
+
+
+What is the probability that the upper bound is less than or equal to  30? 
+p(k <= 30) = p(25 <= k <= 30) = Integral(1443209.69837/k^5, 25 to 30) = 
+(-1443209.69837/4k^4, 25 to 30) = 
+-1443209.69837/4(30)^4 + 1443209.69837/4(25)^4
+0.923654 - 0.445435 = 0.478219
+p(k <= 30) = 47.8219%
+
+Fill in the blank: you can be  95%  sure that the upper bound is less than  53. 
+Sum(p(k), 25 to x) = 0.95
+(assignment_41_statistics.py)
+x = 53
+

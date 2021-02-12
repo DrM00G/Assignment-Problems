@@ -1,11 +1,11 @@
-from Divide_Conquar import divide_and_conquer_sort
+from euler_estimator import EulerEstimator
 
-print(divide_and_conquer_sort([1,2,4,3,5,8,7,9]))
-
-print(divide_and_conquer_sort([5,8,7,9]))
-
-
-print(divide_and_conquer_sort([100,2,9,8]))
-
-print(divide_and_conquer_sort([1,2,9,8,1,2,5,6,2]))
-
+euler = EulerEstimator(
+                derivatives = [
+                    (lambda t, x: -0.0003*x[1]*x[0]+0.01*x[1]+0.001),
+                    (lambda t, x: -0.02*x[1]+0.0003*x[1]*x[0]),
+                    (lambda t, x: 0.01*x[1])
+                    ],
+                point = (0,(1000,1,0))
+            )
+euler.plot([0,150], step_size = 0.001, filename = 'plot.png')

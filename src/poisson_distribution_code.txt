@@ -1,0 +1,44 @@
+A:
+1:
+We can simplify 2^x/x! from 0 to ∞, to e^2, and then we mustmultiply e^(-2), which is e^(2-2) = 1.
+
+2:
+2^x/x! * e^-2 from 11 to 12
+e^-2 ((2^11/11!) + (2^12/12!))
+
+3:
+E[X] = sum(n * 2^n * e^-2 / n!) from 0 to ∞
+= e^-2 sum(2^n / (n - 1)!) from 0 to ∞
+= 2 * e^-2 sum(2^(n - 1) / (n - 1)!) from 0 to ∞
+= 2 * e^-2 sum(2^n / n!) from 0 to ∞
+= 2 * e^-2 * e^2 = 2 * e^(2-2)
+= 2
+
+4:
+(x-2)^2 * 2^x/x! * e^-2 from 0 to ∞
+x^2 - 4x + 4 (2^x/x! * e^-2) from 0 to ∞
+x^2*(2^x/x! * e^-2)-4x*(2^x/x! * e^-2)+4(2^x/x! * e^-2) from 0 to ∞
+6-8+4=2
+
+B:
+1:
+We can simplify λ^x/x! from 0 to ∞, to e^λ, and then we mustmultiply e^(-λ), which is e^(λ-λ) = 1.
+
+2:
+λ^x/x! * e^-λ from 11 to 12
+e^-λ ((λ^11/11!) + (λ^12/12!))
+
+3:
+E[X] = sum(n * λ^n * e^-λ / n!) from 0 to ∞
+= e^-λ sum(λ^n / (n - 1)!) from 0 to ∞
+= λ * e^-λ sum(λ^(n - 1) / (n - 1)!) from 0 to ∞
+= λ * e^-λ sum(λ^n / n!) from 0 to ∞
+= λ * e^-λ * e^λ = λ * e^(λ-λ)
+= λ
+
+4:
+(x-λ)^2 = (x^2 - 2xλ + λ^2) * ( λ^x/x! * e^-λ from 0 to ∞ )
+x^2 λ^x/x! * e^-λ = 
+λ^2 + λ - 2xλ * λ^x/x! * e^-λ = 
+-2λ^2 + λ^2 * λ^x/x! * e^-λ  = λ^2
+λ^2 + λ - 2λ^2 + λ^2 = λ

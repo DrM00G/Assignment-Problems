@@ -1,0 +1,45 @@
+p(x)={k x∈[a,b]
+     {0 x∉[a,b]
+A
+I need to find the sum of the probobility to see where it equals one
+Sum(p(x)) = Integral{p(x),-∞ to ∞} = 
+    Integral{0, -∞ to a} + Integral{k, a to b} + Integral{0, b to ∞} = 0 + (kb - ka) + 0 = k(b-a). 
+    1 = k(b-a)
+    k = 1/(b-a)
+
+B 
+Distribution x < a:
+        Integral{0, -∞ to x} = 
+        0
+Distribution a<x<b:
+        Integral{k, a to x} = 
+        kx-ka = 
+        k(x-a)
+Distribution if x>b:
+        Integral{k, a to b} + Integral{0, b to x} = 
+        kb-ka + 0 = 
+        k(b-a)
+
+
+              {0      x<a
+    P(X<=x) = {k(x-a) a < x < b
+              {k(b-a) x > b
+
+C
+E[X] = ∑xp(x)=
+       Integral{x*p(x), -∞ to ∞} = 
+       Integral{x*0, -∞ to a} + Integral{kx, a to b} + Integral{x*0, b to ∞} = 
+       0 + (kx^2/2, a to b) + 0 = 
+       k(b^2-a^2)/2
+
+D
+Var[X]= E[(X−E[X])^2] =
+        Integral{(x-E[X])^2 * p(x), -∞ to ∞} = 
+        Integral{(x-E[X])^2 * 0, -∞ to a} + 
+        Integral{(x-(k(b^2-a^2)/2)^2 * k, a to b} + 
+        Integral{(x-E[X])^2 * 0, b to ∞} =
+        0 + Integral{(x-(k(b^2-a^2)/2)^2 * k, a to b} + 0 =
+        Integral{x^2k - k^2(b^2 - a^2)x + (k^3(b^2 - a^2)^2)/4, a to b} = 
+        {kx^3/3 - (k^2*x^2*(b^2 - a^2)^2)/2 + (k^3*x*(b^2 - a^2)^2)/4, a to b} =
+        kb^3/3 - (k^2*b^2*(b^2 - a^2)^2)/2 + (k^3*b*(b^2 - a^2)^2)/4 - (ka^3/3 - (k^2*a^2*(b^2 - a^2)^2)/2 + (k^3*a*(b^2 - a^2)^2)/4) = 
+        k(b^3 - a^3)/3 + k^2(-b^4 - a^4)/2 + k^3(b^2 - a^2)^3(b-a)/4
