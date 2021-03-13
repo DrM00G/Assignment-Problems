@@ -1,2 +1,2 @@
-run = "python src/problem_76_2_1.py"
+run = "python src/math15_2.py"
 language = "python3"
