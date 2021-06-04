@@ -1,2 +1,2 @@
-run = "python src/math15_2.py"
-language = "python3"
+run = "python Quiz2_6.py"
+language = "bash"
